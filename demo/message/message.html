@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Desktop Notification Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body ng-app="message" ng-controller="MessageController as vm">
+    <div class="container">
+      <div class="row">
+        <h1>1.) Return to main page and send a message</h1>
+        <p style="font-size:20px;">
+          Notification should work
+        </p>
+        <h1>2.) Move this page side by side with the main page then send a message</h1>
+        <p style="font-size:20px;">
+          <strong>Just like the image below:</strong> (Notification should not work) 
+        </p>
+        <img src="../assets/sample.png" style="width:700px;"/>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="message.js"></script>
+    <script src="../../angular-desktop-notification.js"></script>
+  </body>
+</html>

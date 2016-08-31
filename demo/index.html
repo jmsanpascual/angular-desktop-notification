@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <title>Angular Desktop Notification Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  </head>
+  <body ng-app="demo" ng-controller="DemoController as vm">
+    <div class="container">
+      <div class="row">
+        <h1>Angular HTML5 Desktop Notification Demo</h1><hr />
+
+        <div class="col-md-12">
+          <h4>Utility Functions</h4>
+          <p>
+            Supported: {{ vm.isSupported }} <br>
+            Permission: {{ vm.permission }}
+          </p>
+          <button class="btn btn-info" ng-click="vm.checkiFSupported()">Check for browser support</button>
+          <button class="btn btn-info" ng-click="vm.requestPermission()">Request for permission</button>
+        </div><br>
+
+        <div class="col-md-12">
+          <h4>Displaying Notifications</h4>
+          <div class="col-md-12">
+            autoClose: <input type="checkbox" ng-model="vm.autoClose" />
+          </div>
+          <button class="btn btn-info" ng-click="vm.showNotification()">Simple Notification</button>
+          <button class="btn btn-info" ng-click="vm.showNotificationWithIcon()">Notification with Icon</button>
+          <button class="btn btn-info" ng-click="vm.showNotificationWithClick()">Notification with Click Event</button>
+        </div><br>
+
+        <div class="col-md-12">
+          <h4>Displaying Notifications Only When Page is Hidden</h4>
+          <i>(Open the popup window first, that page will receive the message that you will send)</i>
+          <input class="form-control" type="text" placeholder="Your message here" ng-model="vm.message" />
+          <br>
+          <button class="btn btn-info" ng-click="vm.openPopupWindow()">Open Popup Window</button>
+          <button class="btn btn-info" ng-click="vm.sendMessage(vm.message)">Send Message</button>
+        </div><br>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="../angular-desktop-notification.js"></script>
+  </body>
+</html>

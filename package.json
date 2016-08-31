@@ -1,0 +1,16 @@
+{
+  "name": "angular-desktop-notification",
+  "version": "0.0.1",
+  "description": "A simple HTML5 notification for Angular 1",
+  "main": "demo/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "html5",
+    "notification"
+  ],
+  "author": "Julius Marvin S. San Pascual",
+  "license": "MIT"
+}
