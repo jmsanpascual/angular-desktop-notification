@@ -25,6 +25,16 @@ A simple HTML5 notification for Angular 1
     desktopNotification.show('My Notification');
   });
   ```
+5. You can also set the default app-wide configuration for desktopNotification
+
+  ```javascript
+  angular.module('myApp').config(function (desktopNotificationProvider) {
+   desktopNotificationProvider.config({
+    autoClose: false,
+    showOnPageHidden: true
+   });
+  });
+  ```
 
 ## How to use
 A simple usage would be, request the permission and display the notification in the success callback
