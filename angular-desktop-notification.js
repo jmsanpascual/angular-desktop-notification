@@ -24,7 +24,12 @@
                 isSupported: isSupported,
                 currentPermission: currentPermission,
                 requestPermission: requestPermission,
-                show: showNotification
+                show: showNotification,
+                permissions: {
+                    default: PERMISSIONS.DEFAULT,
+                    granted: PERMISSIONS.GRANTED,
+                    denied: PERMISSIONS.DENIED
+                }
             };
 
         return service;

@@ -1,8 +1,8 @@
 {
   "name": "angular-desktop-notification",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A simple HTML5 notification for Angular 1",
-  "main": "demo/index.html",
+  "main": "angular-desktop-notification.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,17 @@
     "html5",
     "notification"
   ],
-  "author": "Julius Marvin S. San Pascual",
-  "license": "MIT"
+  "author": {
+    "name": "Julius Marvin S. San Pascual",
+    "email": "jm.sanpascual@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsanpascual/angular-desktop-notification.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmsanpascual/angular-desktop-notification/issues"
+  },
+  "homepage": "https://github.com/jmsanpascual/angular-desktop-notification#readme"
 }
