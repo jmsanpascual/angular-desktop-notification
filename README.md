@@ -10,12 +10,12 @@ A simple HTML5 notification for Angular 1
   <script type="text/javascript" src="angular.js"></script>
   <script type="text/javascript" src="angular-desktop-notification.js"></script>
   ```
-4. Add the ngDesktopNotification module to you application
+4. Add the ngDesktopNotification module to you application.
   
   ```javascript
   angular.module('myApp', ['ngDesktopNotification']);
   ```
-5. You can now use the injectable service 'desktopNotification'
+5. You can now use the injectable service 'desktopNotification'.
 
   ```javascript
   angular.module('myApp').controller(function (desktopNotification) {
@@ -40,7 +40,7 @@ desktopNotification.requestPermission().then(function (permission) {
 
 This method returns true if the browser supports the Notification API, false otherwise
 ```javascript
-desktopNotification.isSupported()
+desktopNotification.isSupported();
 ```
 
 This method will get the current permission set in the browser which could be one of the ff.
