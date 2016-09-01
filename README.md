@@ -42,7 +42,10 @@ A simple usage would be, request the permission and display the notification in 
 desktopNotification.requestPermission().then(function (permission) {
   // User allowed the notification
   desktopNotification.show('Hello', {
-    body: 'I am an HTML5 notification'
+    body: 'I am an HTML5 notification',
+    onClick: function () {
+      // Handle click event
+    }
   });
 }, function (permission) {
   // User denied the notification
@@ -77,6 +80,7 @@ This method will display the notification using the parameter values
   - options.autoClose - a boolean property that will close the notification after the duration specified (Defaults to true)
   - options.duration - an integer that will set the seconds before the notification is automatically closed (Defaults to 5)
   - options.showOnPageHidden - a boolean property that will only show the notification if the page is hidden (Defaults to false)
+  - options.onClick - a function that will trigger when the notification is clicked (Defaults to none)
 ```javascript
 desktopNotification.show(title, options);
 ```
