@@ -2,20 +2,23 @@
 A simple HTML5 notification for Angular 1
 
 ## Getting Started
-1. Download this repository by pressing the green button on the upper right corner.
-2. Then extract it to your project folder.
-3. Include angular.js and angular-desktop-notification.js to your index page.
+1. Go to your project directory using your command line tool then install the project using npm
+ 
+  ```shell
+  npm install angular-desktop-notification
+  ```
+2. Include angular.js and angular-desktop-notification.js to your index page.
 
   ```html
   <script type="text/javascript" src="angular.js"></script>
   <script type="text/javascript" src="angular-desktop-notification.js"></script>
   ```
-4. Add the ngDesktopNotification module to you application.
+3. Add the ngDesktopNotification module to you application.
   
   ```javascript
   angular.module('myApp', ['ngDesktopNotification']);
   ```
-5. You can now use the injectable service 'desktopNotification'.
+4. You can now use the injectable service 'desktopNotification'.
 
   ```javascript
   angular.module('myApp').controller(function (desktopNotification) {
