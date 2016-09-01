@@ -29,10 +29,10 @@ A simple HTML5 notification for Angular 1
 
   ```javascript
   angular.module('myApp').config(function (desktopNotificationProvider) {
-   desktopNotificationProvider.config({
-    autoClose: false,
-    showOnPageHidden: true
-   });
+    desktopNotificationProvider.config({
+      autoClose: false,
+      showOnPageHidden: true
+    });
   });
   ```
 
