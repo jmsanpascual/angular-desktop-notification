@@ -84,10 +84,13 @@ This method will display the notification using the parameter values
 ```javascript
 desktopNotification.show(title, options);
 ```
+> Note: Please see all the available parameters here at the [official documentation] (https://developer.mozilla.org/en/docs/Web/API/notification#Instance_properties)
 
 ## Limitations
 Angular Desktop Notification is not supported in all browsers.  
 Please see [supported browser versions] (http://caniuse.com/#feat=notifications) for more information on the official support specification.
+
+Also, only Chrome allows the desktop notification to persist, if and only if, the user hovers on it. Please check the [other browsers closing behavior] (https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Closing_notifications).
 
 ## Inspirations and Motivations 
 - https://github.com/sagiegurari/angular-web-notification
