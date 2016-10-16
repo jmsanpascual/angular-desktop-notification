@@ -50,17 +50,17 @@
             // Public API
 
             function isSupported() {
-                return ! (typeof Notification === undefined);
+                return ! (typeof Notification === 'undefined');
             }
 
             function currentPermission() {
                 // Wrap with a function, so that we can extend this easily to
                 // support getting permissions using older API versions
-                return Notification.permission;
+                return (Notification || {}).permission;
             }
 
             function requestPermission() {
-                if (! isSupported()) $q.reject('Notification API not supported');
+                if (! isSupported()) return $q.reject('Notification API not supported');
 
                 var deferred = $q.defer();
 
