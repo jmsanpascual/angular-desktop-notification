@@ -1,6 +1,6 @@
 {
   "name": "angular-desktop-notification",
-  "version": "1.0.5",
+  "version": "1.1.5",
   "description": "A simple HTML5 notification for Angular 1",
   "main": "angular-desktop-notification.js",
   "scripts": {
