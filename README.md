@@ -3,7 +3,7 @@ A simple HTML5 notification for Angular 1
 
 ## Getting Started
 1. Go to your project directory using your command line tool then install the project using npm
- 
+
   ```shell
   npm install angular-desktop-notification
   ```
@@ -14,7 +14,7 @@ A simple HTML5 notification for Angular 1
   <script type="text/javascript" src="angular-desktop-notification.js"></script>
   ```
 3. Add the ngDesktopNotification module to you application.
-  
+
   ```javascript
   angular.module('myApp', ['ngDesktopNotification']);
   ```
@@ -84,21 +84,22 @@ This method will display the notification using the parameter values
 ```javascript
 desktopNotification.show(title, options);
 ```
-> Note: Please see all the available parameters here at the [official documentation] (https://developer.mozilla.org/en/docs/Web/API/notification#Instance_properties)
+> Note: Please see all the available parameters here at the [official documentation](https://developer.mozilla.org/en/docs/Web/API/notification#Instance_properties)
 
 ## Limitations
 Angular Desktop Notification is not supported in all browsers.  
-Please see [supported browser versions] (http://caniuse.com/#feat=notifications) for more information on the official support specification.
+Please see [supported browser versions](http://caniuse.com/#feat=notifications) for more information on the official support specification.
 
-Also, only Chrome allows the desktop notification to persist, if and only if, the user hovers on it. Please check the [other browsers closing behavior] (https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Closing_notifications).
+Also, only Chrome allows the desktop notification to persist, if and only if, the user hovers on it. Please check the [other browsers closing behavior](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#Closing_notifications).
 
-## Inspirations and Motivations 
+## Inspirations and Motivations
 - https://github.com/sagiegurari/angular-web-notification
 - https://github.com/ttsvetko/HTML5-Desktop-Notifications
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE] (https://github.com/jmsanpascual/angular-desktop-notification/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/jmsanpascual/angular-desktop-notification/blob/master/LICENSE) file for details
 
 ## TODO
-- Unit tests
-- Support for older browser versions and IE
+- [x] Build tools for concatenation and minification
+- [x] Unit tests (Incomplete)
+- [ ] Support for older browser versions and IE
