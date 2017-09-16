@@ -13,7 +13,7 @@ function desktopNotification() {
 
     return {
         config: config,
-        $get: ['$q', '$timeout', 'PERMISSIONS', factory]
+        $get: ['$q', '$timeout', '$window', 'PERMISSIONS', factory]
     };
 
     function config(options) {
@@ -24,19 +24,21 @@ function desktopNotification() {
         }
     }
 
-    function factory($q, $timeout, PERMISSIONS) {
-        var Notification = window.Notification || window.mozNotification || window.webkitNotification,
-            service = {
-                isSupported: isSupported,
-                currentPermission: currentPermission,
-                requestPermission: requestPermission,
-                show: showNotification,
-                permissions: {
-                    'default': PERMISSIONS.DEFAULT,
-                    'granted': PERMISSIONS.GRANTED,
-                    'denied': PERMISSIONS.DENIED
-                }
-            };
+    function factory($q, $timeout, $window, PERMISSIONS) {
+        var Notification = $window.Notification
+                || $window.mozNotification
+                || $window.webkitNotification;
+        var service = {
+            isSupported: isSupported,
+            currentPermission: currentPermission,
+            requestPermission: requestPermission,
+            show: showNotification,
+            permissions: {
+                'default': PERMISSIONS.DEFAULT,
+                'granted': PERMISSIONS.GRANTED,
+                'denied': PERMISSIONS.DENIED
+            }
+        };
 
         return service;
 
@@ -57,17 +59,16 @@ function desktopNotification() {
 
             var deferred = $q.defer();
 
-            Notification.requestPermission().then(requestPermission);
-            return deferred.promise;
-
             // Convert the ES6 promise to angular's $q promise
-            function requestPermission(permission) {
+            Notification.requestPermission().then(function (permission) {
                 if (PERMISSIONS.GRANTED === permission) {
                     deferred.resolve(permission);
                 } else {
                     deferred.reject(permission);
                 }
-            }
+            });
+
+            return deferred.promise;
         }
 
         function showNotification(title, options) {
