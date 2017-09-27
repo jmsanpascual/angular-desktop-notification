@@ -2,7 +2,7 @@
   "name": "angular-desktop-notification",
   "version": "1.1.5",
   "description": "A simple HTML5 notification for Angular 1",
-  "main": "angular-desktop-notification.js",
+  "main": "dist/angular-desktop-notification.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
