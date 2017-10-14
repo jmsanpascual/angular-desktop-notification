@@ -1,5 +1,6 @@
 # Angular Desktop Notification
 A simple HTML5 notification for Angular 1
+[DEMO](https://jmsanpascual.github.io/angular-desktop-notification/)
 
 ## Getting Started
 1. Go to your project directory using your command line tool then install the project using npm
